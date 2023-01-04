@@ -7,6 +7,14 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Production -->
+  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+  <!-- Development -->
+  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.10/lib/theme-chalk/index.css">
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui@2.15.10/lib/index.js"></script>
 </head>
 <body>
   <div id="app"></div>
@@ -14,11 +22,13 @@
     window.$docsify = {
       name: 'Carlo Tools',
       repo: 'kaluojushi/carlo-tools/',
-      // loadNavbar: true,
+      loadSidebar: true,
       auto2top: true,
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script type="module" src="js/vue.js"></script>
+  <link rel="stylesheet" href="js/styles.css">
 </body>
 </html>

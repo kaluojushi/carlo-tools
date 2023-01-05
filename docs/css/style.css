@@ -1,10 +1,8 @@
-.bmi-cal-card {
+.vue-component-card {
   margin-top: 20px;
 }
 
-.bmi-cal-card-header {
+.vue-component-card-header {
   font-size: 18px;
 }
-.bmi-cal-result {
-  font-size: 24px;
-}
+

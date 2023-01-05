@@ -1,0 +1,26 @@
+{
+  "name": "carlo-tools",
+  "version": "1.0.0",
+  "description": "Something useful and interesting",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaluojushi/carlo-tools.git"
+  },
+  "keywords": [
+    "tools"
+  ],
+  "author": "Carlo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaluojushi/carlo-tools/issues"
+  },
+  "homepage": "https://github.com/kaluojushi/carlo-tools#readme"
+}

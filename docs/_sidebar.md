@@ -1,9 +1,11 @@
 - 工具箱
+  - [工具大全](toolbox/abc)
   - [PDF 工具](toolbox/pdf)
   - [文字类工具](toolbox/text)
   - [图片类工具](toolbox/image)
   - [代码类工具](toolbox/code)
 - 在线工具
-  - [BMI 计算器](online/bmi)
-  - [随机数生成器](online/random)
-  - [时间戳转换](online/timestamp)
+  - [在线工具](online/)
+- 摸鱼
+  - [小游戏](fun/game)
+  - [有趣项目](fun/programs)

@@ -7,14 +7,16 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- Production -->
+  <!-- Vue2 Production -->
   <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
-  <!-- Development -->
+  <!-- Vue3 Development -->
   <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <!-- import CSS -->
+  <!-- import Element CSS -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.10/lib/theme-chalk/index.css">
-  <!-- import JavaScript -->
+  <!-- import Element JavaScript -->
   <script src="https://unpkg.com/element-ui@2.15.10/lib/index.js"></script>
+  <!-- import clipboard -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 <body>
   <div id="app"></div>
@@ -23,11 +25,13 @@
       name: 'Carlo Tools',
       repo: 'kaluojushi/carlo-tools/',
       loadSidebar: true,
+      subMaxLevel: 2,
       auto2top: true,
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script type="module" src="js/vue.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </body>

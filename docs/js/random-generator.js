@@ -33,10 +33,10 @@ const randomGenerator = {
       <span>生成结果</span>
     </div>
     <span style="font-size: 20px">{{ tipText }}</span>
-    <div v-if="rightAnswer" style="margin-top: 10px">
+    <div style="margin-top: 10px">
       <el-button v-for="item in result" :key="item" class="copyBtn" style="margin: 5px; font-size: 16px" @click="onCopy" :data-clipboard-text="item">{{ item }}</el-button>
     </div>
-    <div v-if="rightAnswer" style="font-size: 18px">
+    <div style="font-size: 18px">
       点击数字复制，或 <el-button class="copyBtn" style="font-size: 18px" type="text" @click="onCopy" :data-clipboard-text="result.join(',')">点击此处</el-button> 一键复制
     </div>
   </el-card>
@@ -51,7 +51,6 @@ const randomGenerator = {
         isRepeat: false,
       },
       showResult: false,
-      rightAnswer: false,
       tipText: '',
       result: [],
     }
@@ -61,13 +60,13 @@ const randomGenerator = {
       this.result = [];
       const { count, min, max, isRepeat } = this.form;
       if (!isRepeat && count > max - min + 1) {
-        this.tipText = '生成个数不能大于范围';
-        this.rightAnswer = false;
+        this.$message.error('生成个数不能大于范围');
+        this.showResult = false;
       } else if (Number(count) === 0) {
-        this.tipText = '生成个数不能为0';
-        this.rightAnswer = false;
+        this.$message.error('生成个数不能为 0');
+        this.showResult = false;
       } else {
-        this.rightAnswer = true;
+        this.showResult = true;
         this.tipText = '生成的随机数为：';
         while (this.result.length < count) {
           const random = Math.floor(Math.random() * (max - min + 1) + min);
@@ -76,7 +75,6 @@ const randomGenerator = {
           }
         }
       }
-      this.showResult = true;
     },
     onReset() {
       this.form = {

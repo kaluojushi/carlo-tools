@@ -28,9 +28,9 @@ const bmiCal = {
       <span>计算结果</span>
     </div>
     <div>
-      <span v-if="rightAnswer">您的BMI指数为：</span>
-      <span v-if="rightAnswer" style="font-size: 24px" :style="'color:' + color">{{ bmi }}</span>
-      <span v-if="rightAnswer">，身体状态：</span>
+      <span>您的BMI指数为：</span>
+      <span style="font-size: 24px" :style="'color:' + color">{{ bmi }}</span>
+      <span>，身体状态：</span>
       <span style="font-size: 24px" :style="'color:' + color">{{ status }}</span>
     </div>
   </el-card>
@@ -60,7 +60,6 @@ const bmiCal = {
         weight: '',
       },
       showBmi: false,
-      rightAnswer: false,
       bmi: '',
       status: '',
       color: '',
@@ -70,14 +69,12 @@ const bmiCal = {
   },
   methods: {
     onSubmit() {
-      this.showBmi = true;
       this.bmi = (Number(this.form.weight) / Math.pow(Number(this.form.height) / 100, 2)).toFixed(2);
       if (isNaN(this.bmi)) {
-        this.rightAnswer = false;
-        this.status = "请输入正确的身高和体重";
-        this.color = "#000";
+        this.$message.error("请输入正确的身高和体重");
+        this.showBmi = false;
       } else {
-        this.rightAnswer = true;
+        this.showBmi = true;
         let idx = 0;
         if (this.bmi < 18.5) {
           idx = 0;

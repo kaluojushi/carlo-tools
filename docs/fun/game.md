@@ -6,7 +6,7 @@
 
 > 5 个字母的英文单词，输入模式，每天 0 点更新
 > 
-> Wordle 鼻祖
+> Wordle 类游戏鼻祖
 
 ### [汉兜](https://handle.antfu.me/)
 

@@ -9,3 +9,7 @@
 .copyBtn {
   cursor: pointer;
 }
+
+.tipText {
+  margin-bottom: 20px;
+}

@@ -7,8 +7,10 @@ import dateCal from "./date-cal.js";
 import radixConverter from "./radix-converter.js";
 import colorConverter from "./color-converter.js";
 import numberConverter from "./number-converter.js";
+import onlineList from "./online-list.js";
 
 window.$docsify.vueComponents = {
+  'online-list': onlineList,
   'button-counter': buttonCounter,
   'bmi-cal': bmiCal,
   'random-generator': randomGenerator,

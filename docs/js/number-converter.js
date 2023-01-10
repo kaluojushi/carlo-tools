@@ -13,7 +13,7 @@ const numberConverter = {
         <el-input v-model="inputForm.number" placeholder="￥12,345.67"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="convert">转换</el-button>
+        <el-button type="basic" @click="convert">转换</el-button>
       </el-form-item>
     </el-form>
   </el-card>
@@ -24,31 +24,31 @@ const numberConverter = {
     </div>
     <el-form :model="outputForm" label-width="100px">
       <el-form-item label="繁体中文">
-        <el-switch v-model="isTraditionalChinese" @change="onSwitch"></el-switch>
+        <el-switch v-model="isTraditionalChinese" @change="onSwitch" active-color="#42B983"></el-switch>
       </el-form-item>
       <el-form-item label="分隔符">
         <el-input v-model="outputForm.split" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="outputForm.split" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="outputForm.split" @click="onCopy"></i>
         </el-input>
       </el-form-item>
       <el-form-item :label="(isTraditionalChinese ? '繁' : '简') + '体中文小写'">
         <el-input v-model="outputForm.lower" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="outputForm.lower" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="outputForm.lower" @click="onCopy"></i>
         </el-input>
       </el-form-item>
       <el-form-item :label="(isTraditionalChinese ? '繁' : '简') + '体中文大写'">
         <el-input v-model="outputForm.upper" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="outputForm.upper" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="outputForm.upper" @click="onCopy"></i>
         </el-input>
       </el-form-item>
       <el-form-item :label="(isTraditionalChinese ? '繁' : '简') + '体金额简写'">
         <el-input v-model="outputForm.moneyBrief" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="outputForm.moneyBrief" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="outputForm.moneyBrief" @click="onCopy"></i>
         </el-input>
       </el-form-item>
       <el-form-item :label="(isTraditionalChinese ? '繁' : '简') + '体金额全写'">
         <el-input v-model="outputForm.moneyFull" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="outputForm.moneyFull" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="outputForm.moneyFull" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>
@@ -74,7 +74,7 @@ const numberConverter = {
       inputForm: {
         number: '',
       },
-      showResult: true,
+      showResult: false,
       isTraditionalChinese: false,
       outputForm: {
         split: '',

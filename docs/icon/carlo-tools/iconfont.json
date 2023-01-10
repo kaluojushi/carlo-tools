@@ -1,0 +1,30 @@
+{
+  "id": "3859010",
+  "name": "carlo-tools",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1305483",
+      "name": "数字",
+      "font_class": "shuzi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "10268519",
+      "name": "BMI自测",
+      "font_class": "BMIzice",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "25495328",
+      "name": "随机数生成",
+      "font_class": "suijishushengcheng",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    }
+  ]
+}

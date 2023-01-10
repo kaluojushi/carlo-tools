@@ -10,18 +10,18 @@ const dateCal = {
         <el-date-picker v-model="dateDiff.startDate" type="date" placeholder="选择日期" format="yyyy-MM-dd" :picker-options="pickerOptions"></el-date-picker>
       </el-form-item>
       <el-form-item>
-        <el-button type="success" icon="el-icon-refresh" @click="onDateDiffExchange"></el-button>
+        <el-button icon="el-icon-refresh" @click="onDateDiffExchange"></el-button>
       </el-form-item>
       <el-form-item label="结束日期">
         <el-date-picker v-model="dateDiff.endDate" type="date" placeholder="选择日期" format="yyyy-MM-dd" :picker-options="pickerOptions"></el-date-picker>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onDateDiff">计算</el-button>
+        <el-button type="basic" @click="onDateDiff">计算</el-button>
       </el-form-item>
     </el-form>
     <div class="tipText" v-if="showDateDiff">
       日期差为：
-      <span style="font-size: 24px">{{dateDiffResult}}</span>
+      <span style="font-size: 24px; font-weight: bold" class="themeColor">{{dateDiffResult}}</span>
       天
     </div>
   </el-card>
@@ -41,12 +41,12 @@ const dateCal = {
         <el-input-number v-model="dateAdd.days" :step="1"></el-input-number>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onDateAdd">计算</el-button>
+        <el-button type="basic" @click="onDateAdd">计算</el-button>
       </el-form-item>
     </el-form>
     <div class="tipText" v-if="showDateAdd">
       计算日期为：
-      <span style="font-size: 24px">{{dateAddResult}}</span>
+      <span style="font-size: 24px; font-weight: bold" class="themeColor">{{dateAddResult}}</span>
     </div>
   </el-card>
 </div>
@@ -102,9 +102,9 @@ const dateCal = {
       }
       const startDate = new Date(this.dateAdd.startDate);
       const endDate = new Date(startDate.getTime() + this.dateAdd.days * 24 * 3600 * 1000);
-      this.dateAddResult = endDate.getFullYear() + '-' + (endDate.getMonth() + 1) + '-' + endDate.getDate();
+      this.dateAddResult = endDate.getFullYear() + '-' + (endDate.getMonth() + 1).padStart(2, '0') + '-' + endDate.getDate().padStart(2, '0');
       this.showDateAdd = true;
-    }
+    },
   },
   created() {
     const date = new Date();
@@ -118,3 +118,7 @@ const dateCal = {
 };
 
 export default dateCal;
+
+Number.prototype.padStart = function (len, str) {
+  return String(this).padStart(len, str);
+}

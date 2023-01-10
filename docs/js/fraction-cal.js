@@ -19,13 +19,13 @@ const fractionCal = {
         </el-col>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onReduction">计算</el-button>
+        <el-button type="basic" @click="onReduction">计算</el-button>
       </el-form-item>
     </el-form>
     <el-form :inline="true" label-width="90px">
       <el-form-item label="结果">
         <el-input v-model="reductionResult" placeholder="结果" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="reductionResult" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="reductionResult" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>
@@ -46,13 +46,13 @@ const fractionCal = {
         <el-input v-model="gcd.b" placeholder="请输入数字2"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onGcd">计算</el-button>
+        <el-button type="basic" @click="onGcd">计算</el-button>
       </el-form-item>
     </el-form>
     <el-form :inline="true" label-width="50px">
       <el-form-item label="结果">
         <el-input v-model="gcdResult" placeholder="结果" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="gcdResult" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="gcdResult" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>
@@ -73,13 +73,13 @@ const fractionCal = {
         <el-input v-model="lcm.b" placeholder="请输入数字2"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onLcm">计算</el-button>
+        <el-button type="basic" @click="onLcm">计算</el-button>
       </el-form-item>
     </el-form>
     <el-form :inline="true" label-width="50px">
       <el-form-item label="结果">
         <el-input v-model="lcmResult" placeholder="结果" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="lcmResult" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="lcmResult" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>

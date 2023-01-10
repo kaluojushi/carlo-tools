@@ -17,7 +17,7 @@ const bmiCal = {
         </el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">提交</el-button>
+        <el-button type="basic" @click="onSubmit">提交</el-button>
         <el-button @click="onReset">重置</el-button>
       </el-form-item>
     </el-form>
@@ -29,10 +29,27 @@ const bmiCal = {
     </div>
     <div>
       <span>您的BMI指数为：</span>
-      <span style="font-size: 24px" :style="'color:' + color">{{ bmi }}</span>
+      <span style="font-size: 24px" :style="{ color }">{{ bmi }}</span>
       <span>，身体状态：</span>
-      <span style="font-size: 24px" :style="'color:' + color">{{ status }}</span>
+      <span style="font-size: 24px" :style="{ color }">{{ status }}</span>
     </div>
+  </el-card>
+  
+  <el-card class="vue-component-card">
+    <div slot="header" class="vue-component-card-header">
+      <span>BMI 计算公式</span>
+    </div>
+    <div style="font-size: 20px; font-weight: bold; margin-bottom: 20px;" class="themeColor">
+      <span>BMI = 体重(kg) / 身高(m)²</span>
+    </div>
+    <el-table :data="bmiInfo" style="font-size: 18px; width: 100%">
+      <el-table-column prop="type" label="类型" align="center">
+        <template slot-scope="scope">
+          <span :style="{ color: scope.row.color }">{{ scope.row.type }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column prop="range" label="范围" align="center"></el-table-column>
+    </el-table>
   </el-card>
   
   <el-card class="vue-component-card">
@@ -65,6 +82,8 @@ const bmiCal = {
       color: '',
       statusList: [ "偏瘦", "正常", "超重", "肥胖" ],
       colorList: [ "#409EFF", "#67C23A", "#E6A23C", "#F56C6C" ],
+      bmiInfo: [],
+      rangeList: [ "BMI < 18.5", "18.5 <= BMI < 24", "24 <= BMI < 28", "BMI >= 28" ],
     };
   },
   methods: {
@@ -95,6 +114,13 @@ const bmiCal = {
       this.showBmi = false;
     },
   },
+  created() {
+    this.bmiInfo = [0, 1, 2, 3].map(idx => ({
+      color: this.colorList[idx],
+      type: this.statusList[idx],
+      range: this.rangeList[idx],
+    }));
+  }
 };
 
 export default bmiCal;

@@ -10,6 +10,14 @@
   cursor: pointer;
 }
 
+.copyBtnHover:hover {
+  color: #42B983;
+}
+
 .tipText {
   margin-bottom: 20px;
+}
+
+.themeColor {
+  color: #42B983;
 }

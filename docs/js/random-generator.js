@@ -19,10 +19,10 @@ const randomGenerator = {
         </el-col>
       </el-form-item>
       <el-form-item prop="isRepeat" label="是否重复">
-        <el-switch v-model="form.isRepeat" active-text="是" inactive-text="否"></el-switch>
+        <el-switch v-model="form.isRepeat" active-text="是" inactive-text="否" active-color="#42B983"></el-switch>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">提交</el-button>
+        <el-button type="basic" @click="onSubmit">提交</el-button>
         <el-button @click="onReset">重置</el-button>
       </el-form-item>
     </el-form>

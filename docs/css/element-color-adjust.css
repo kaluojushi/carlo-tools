@@ -1,0 +1,125 @@
+.el-table table {
+  margin: 0;
+  padding: 0;
+  display: table;
+  border-collapse: separate;
+  overflow: auto;
+  border-spacing: 0;
+}
+
+div.el-switch > span.is-active {
+  color: #42B983;
+}
+
+.el-button.el-button--basic {
+  color: #fff;
+  background-color: #42B983;
+  border-color: #42B983;
+}
+
+.el-button.el-button--basic:focus, .el-button.el-button--basic:hover {
+  color: #fff;
+  background-color: #5CC593;
+  border-color: #42B983;
+}
+
+.el-button.el-button--basic:active {
+  color: #fff;
+  background-color: #40AE7D;
+  border-color: #40AE7D;
+  outline: 0;
+}
+
+.el-button.el-button--default:focus, .el-button.el-button--default:hover {
+  color: #42B983;
+  border-color: #CBE8DC;
+  background-color: #ECF8F2
+}
+
+.el-button.el-button--default:active {
+  color: #40AE7D;
+  border-color: #40AE7D;
+  outline: 0;
+}
+
+.el-button.el-button--text {
+  color: #42B983;
+}
+
+.el-button.el-button--text:focus, .el-button.el-button--text:hover {
+  color: #5CC593;
+}
+
+.el-button.el-button--text:active {
+  color: #40AE7D;
+  outline: 0;
+}
+
+.el-link.el-link--basic {
+  color: #42B983;
+}
+
+.el-link.el-link--basic:hover {
+  color: #5CC593;
+}
+
+.el-link.el-link--basic.is-underline:hover:after {
+  border-color: #42B983;
+}
+
+.el-input__inner:focus {
+  border-color: #42B983;
+}
+
+.el-date-table td.current:not(.disabled) span {
+  color: #fff;
+  background-color: #42B983;
+}
+
+.el-date-table td.today span {
+  color: #42B983;
+}
+
+.el-picker-panel__shortcut:hover {
+  color: #42B983;
+}
+
+.el-date-picker__header-label.active, .el-date-picker__header-label:hover {
+  color: #42B983;
+}
+
+.el-picker-panel__icon-btn:hover {
+  color: #42B983;
+}
+
+.el-date-table td.available:hover {
+  color: #42B983;
+}
+
+.el-year-table td .cell:hover, .el-year-table td.current:not(.disabled) .cell {
+  color: #42B983;
+}
+
+.el-month-table td.current:not(.disabled) .cell {
+  color: #42B983;
+}
+
+.el-month-table td.today .cell {
+  color: #42B983;
+}
+
+.el-month-table td .cell:hover {
+  color: #42B983;
+}
+
+.el-input-number__decrease:hover, .el-input-number__increase:hover {
+  color: #42B983;
+}
+
+.el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled) {
+  border-color: #42B983;
+}
+
+.el-textarea__inner:focus {
+  border-color: #42B983;
+}

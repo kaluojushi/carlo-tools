@@ -3,6 +3,20 @@ const colorConverter = {
 <div>
   <el-card class="vue-component-card">
     <div slot="header" class="vue-component-card-header">
+      <span>快速选择</span>
+    </div>
+    <div class="tipText">
+      docsify 主题色
+    </div>
+    <el-button v-for="item in docsifyColorList" :key="item.color" :style="{ backgroundColor: item.color, color: item.isDark ? '#000' : '#fff' }" @click="quickChoose(item.color)">{{ item.color }}</el-button>
+    <div class="tipText" style="margin-top: 15px">
+      Element UI 主题色
+    </div>
+    <el-button v-for="item in elementUIColorList" :key="item.color" :style="{ backgroundColor: item.color, color: item.isDark ? '#000' : '#fff' }" @click="quickChoose(item.color)">{{ item.color }}</el-button>
+  </el-card>
+
+  <el-card class="vue-component-card">
+    <div slot="header" class="vue-component-card-header">
       <span>颜色转换</span>
     </div>
     <div class="tipText" v-if="isPicker">
@@ -13,7 +27,7 @@ const colorConverter = {
     </div>
     <el-form :model="colorForm" label-width="85px">
       <el-form-item label="选择模式">
-        <el-switch v-model="isPicker" active-text="选择器" inactive-text="输入框"></el-switch>
+        <el-switch v-model="isPicker" active-text="选择器" inactive-text="输入框" active-color="#42B983"></el-switch>
       </el-form-item>
       <el-form-item label="颜色输入框" v-if="!isPicker">
         <el-input v-model="colorForm.input" :placeholder="inputPlaceholder">
@@ -28,18 +42,10 @@ const colorConverter = {
         <el-color-picker v-model="colorForm.color" @change="convert"></el-color-picker>
       </el-form-item>
       <el-form-item v-if="!isPicker">
-        <el-button type="primary" @click="convert">转换</el-button>
+        <el-button type="basic" @click="convert">转换</el-button>
         <el-button @click="reset">重置</el-button>
       </el-form-item>
     </el-form>
-  </el-card>
-  
-  <el-card class="vue-component-card">
-    <div slot="header" class="vue-component-card-header">
-      <span>快速选择</span>
-    </div>
-    <el-button v-for="item in colorList" :key="item.color" :style="{ backgroundColor: item.color, color: item.isDark ? '#000' : '#fff' }" @click="quickChoose(item.color)">{{ item.color }}</el-button>
-</el-button>
   </el-card>
   
   <el-card class="vue-component-card" v-if="showResult">
@@ -49,14 +55,14 @@ const colorConverter = {
     <div class="tipText">
       请点击色块复制颜色值。
     </div>
-    <el-table :data="result" border stripe>
-      <el-table-column prop="color" label="色块" width="100">
+    <el-table :data="result" style="font-size: 16px; width: 100%">
+      <el-table-column prop="color" label="色块" width="100" align="center">
         <template slot-scope="scope">
-          <el-button class="copyBtn" @click="onCopy" :data-clipboard-text="scope.row.value" :style="'background-color:' + scope.row.value"></el-button>
+          <el-button class="copyBtn" @click="onCopy" :data-clipboard-text="scope.row.value" :style="{ backgroundColor: scope.row.value }"></el-button>
         </template>
       </el-table-column>
-      <el-table-column prop="type" label="类型" width="100"></el-table-column>
-      <el-table-column prop="value" label="值" width="200"></el-table-column>
+      <el-table-column prop="type" label="类型" width="200" align="center"></el-table-column>
+      <el-table-column prop="value" label="值" align="center"></el-table-column>
     </el-table>
   </el-card>
 </div>
@@ -70,7 +76,13 @@ const colorConverter = {
         input: '',
       },
       inputPlaceholder: '',
-      colorList: [
+      docsifyColorList: [
+        { color: '#42B983', isDark: false },
+        { color: '#ECF8F2', isDark: true },
+        { color: '#5CC593', isDark: false },
+        { color: '#40AE7D', isDark: false },
+      ],
+      elementUIColorList: [
         { color: '#409EFF', isDark: false },
         { color: '#67C23A', isDark: false },
         { color: '#E6A23C', isDark: false },
@@ -219,23 +231,23 @@ const colorConverter = {
     },
     onTypeChange() {
       if (this.colorForm.type === 'hex') {
-        this.inputPlaceholder = '409EFF 或 #409EFF';
+        this.inputPlaceholder = '42B983 或 #42B983';
       } else if (this.colorForm.type === 'rgb') {
-        this.inputPlaceholder = '64, 158, 255 或 rgb(64, 158, 255)';
+        this.inputPlaceholder = '66, 185, 131 或 rgb(66, 185, 131)';
       } else if (this.colorForm.type === 'hsl') {
-        this.inputPlaceholder = '204, 100%, 50% 或 hsl(204, 100%, 50%)';
+        this.inputPlaceholder = '153, 47%, 49% 或 hsl(153, 47%, 49%)';
       }
     },
     quickChoose(value) {
       this.colorForm.color = value;
       this.colorForm.type = 'hex';
       this.colorForm.input = value;
-      this.inputPlaceholder = '409EFF 或 #409EFF';
+      this.inputPlaceholder = '42B983 或 #42B983';
       this.convert();
     }
   },
   created() {
-    this.colorForm.color = '#409EFF';
+    this.colorForm.color = '#42B983';
     this.inputPlaceholder = '请选择颜色类型';
   }
 };

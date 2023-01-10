@@ -8,17 +8,17 @@ const timestamp = {
       <el-form :inline="true" :model="current" label-width="90px">
         <el-form-item label="当前日期">
           <el-input v-model="current.date" placeholder="当前日期" readonly @click="onCopy">
-            <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="current.date" @click="onCopy"></i>
+            <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="current.date" @click="onCopy"></i>
           </el-input>
         </el-form-item>
         <el-form-item label="当前时间戳">
           <el-input v-model="current.timestamp" placeholder="当前时间戳" readonly>
-            <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="current.timestamp" @click="onCopy"></i>
+            <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="current.timestamp" @click="onCopy"></i>
           </el-input>
         </el-form-item>
         <el-form-item label="毫秒时间戳">
           <el-input v-model="current.msTimestamp" placeholder="毫秒时间戳" readonly>
-            <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="current.msTimestamp" @click="onCopy"></i>
+            <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="current.msTimestamp" @click="onCopy"></i>
           </el-input>
         </el-form-item>
       </el-form>
@@ -39,13 +39,13 @@ const timestamp = {
         <el-input v-model="toTime.timestamp" placeholder="请输入时间戳" @keyup.enter.native="handleToTime"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="handleToTime">转换</el-button>
+        <el-button type="basic" @click="handleToTime">转换</el-button>
       </el-form-item>
     </el-form>
     <el-form :inline="true" :model="toTime" label-width="90px">
       <el-form-item label="转换时间">
         <el-input v-model="toTime.date" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="toTime.date" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="toTime.date" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>
@@ -60,18 +60,18 @@ const timestamp = {
         <el-input v-model="toTimestamp.date" placeholder="请输入时间" @keyup.enter.native="handleToTimestamp"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="handleToTimestamp">转换</el-button>
+        <el-button type="basic" @click="handleToTimestamp">转换</el-button>
       </el-form-item>
     </el-form>
     <el-form :inline="true" :model="toTimestamp" label-width="90px">
       <el-form-item label="转换时间戳">
         <el-input v-model="toTimestamp.timestamp" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="toTimestamp.timestamp" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="toTimestamp.timestamp" @click="onCopy"></i>
         </el-input>
       </el-form-item>
       <el-form-item label="毫秒时间戳">
         <el-input v-model="toTimestamp.msTimestamp" readonly>
-          <i slot="suffix" class="copyBtn el-icon-document-copy" :data-clipboard-text="toTimestamp.msTimestamp" @click="onCopy"></i>
+          <i slot="suffix" class="copyBtn copyBtnHover el-icon-document-copy" :data-clipboard-text="toTimestamp.msTimestamp" @click="onCopy"></i>
         </el-input>
       </el-form-item>
     </el-form>
@@ -95,18 +95,16 @@ const timestamp = {
     <div slot="header" class="vue-component-card-header">
       <span>不同语言的时间戳</span>
     </div>
-    <el-table :data="differentLanguages" border stripe>
-      <el-table-column prop="language" label="语言" width="120"></el-table-column>
-      <el-table-column prop="code" label="代码">
+    <div class="tipText">
+      点击文本框可直接复制代码。
+    </div>
+    <el-table :data="differentLanguages" style="font-size: 16px; width: 100%">
+      <el-table-column prop="language" label="语言" width="100" align="center"></el-table-column>
+      <el-table-column prop="code" label="代码" align="center">
         <template slot-scope="scope">
-          <el-row :gutter="10">
-            <el-col :span="22">
-              <el-input type="textarea" v-model="scope.row.code" readonly></el-input>
-            </el-col>
-            <el-col :span="2">
-              <el-button :data-clipboard-text="scope.row.code" @click="onCopy" icon="el-icon-document-copy"></el-button>
-            </el-col>
-          </el-row>
+          <div class="copyBtn" :data-clipboard-text="scope.row.code" @click="onCopy">
+            <el-input type="textarea" v-model="scope.row.code" readonly></el-input>
+          </div>
         </template>
       </el-table-column>
     </el-table>

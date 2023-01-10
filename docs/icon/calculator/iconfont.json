@@ -1,0 +1,184 @@
+{
+  "id": "3859000",
+  "name": "calculator",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7432357",
+      "name": "平方",
+      "font_class": "pingfang",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "7432363",
+      "name": "立方",
+      "font_class": "lifang",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "7432376",
+      "name": "分数",
+      "font_class": "fenshu",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "7434043",
+      "name": "1",
+      "font_class": "icon-test",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7434104",
+      "name": "0",
+      "font_class": "icon-test1",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "7434105",
+      "name": "2",
+      "font_class": "icon-test2",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "7434106",
+      "name": "3",
+      "font_class": "icon-test3",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7434107",
+      "name": "4",
+      "font_class": "icon-test4",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "7434108",
+      "name": "5",
+      "font_class": "icon-test5",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "7434109",
+      "name": "6",
+      "font_class": "icon-test6",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "7434110",
+      "name": "7",
+      "font_class": "icon-test7",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "7434111",
+      "name": "8",
+      "font_class": "icon-test8",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "7434113",
+      "name": "9",
+      "font_class": "icon-test9",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "7434114",
+      "name": "小数点",
+      "font_class": "xiaoshudian",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "7434410",
+      "name": "根号",
+      "font_class": "genhao",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7434419",
+      "name": "乘号",
+      "font_class": "chenghao",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "7434420",
+      "name": "除号",
+      "font_class": "chuhao",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "7434421",
+      "name": "等于",
+      "font_class": "dengyu",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7434422",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "7434423",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "7434425",
+      "name": "右括号",
+      "font_class": "youkuohao",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "7434426",
+      "name": "左括号",
+      "font_class": "zuokuohao",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "7434443",
+      "name": "百分号",
+      "font_class": "baifenhao",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "7434461",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "7434484",
+      "name": "复制",
+      "font_class": "fuzhi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}

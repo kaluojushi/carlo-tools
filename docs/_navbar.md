@@ -1,9 +1,13 @@
 - 快速入口
   - [工具大全](toolbox/abc)
   - [在线工具](online/)
+  - [摸鱼小游戏](fun/game)
+  - [GitHub 文档类项目](github/docs)
 - 推荐项目
   - [JS Guide](https://jsguide.cn/)
   - [docsify](https://docsify.js.org/#/zh-cn/)
+  - [VuePress](https://vuepress.vuejs.org/zh/)
 - 关于作者
-  - [GitHub](https://github.com/kaluojushi)
+  - [卡洛](https://corecabin.cn/about/)
+  - [GitHub 主页](https://github.com/kaluojushi)
   - [卡洛的核心舱](https://corecabin.cn/)

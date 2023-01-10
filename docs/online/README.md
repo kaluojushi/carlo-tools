@@ -23,4 +23,11 @@
 { name: '时间戳转换', link: 'timestamp', description: '时间戳转时间', icon: 'icon-time-circle' },
 { name: '进制转换', link: 'radix', description: '二进制、八进制、十进制、十六进制数字转换', icon: 'icon-Field-Binary' },
 { name: '颜色转换', link: 'color', description: 'HEX、RGB、HSL 颜色代码转换', icon: 'icon-bg-colors' },
+{ name: '二进制计算器', link: 'binary', description: '位运算、原码/反码/补码计算', icon: 'icon-a-BinaryCode' },
+]"></online-list>
+
+# 开发类
+
+<online-list :list="[
+{ name: '编码转换工具', link: 'encode', description: 'URL 编码解码、Unicode 编码解码', icon: 'icon-code' },
 ]"></online-list>

@@ -8,6 +8,8 @@ import radixConverter from "./radix-converter.js";
 import colorConverter from "./color-converter.js";
 import numberConverter from "./number-converter.js";
 import onlineList from "./online-list.js";
+import encodeTool from "./encode-tool.js";
+import binaryCal from "./binary-cal.js";
 
 window.$docsify.vueComponents = {
   'online-list': onlineList,
@@ -20,4 +22,6 @@ window.$docsify.vueComponents = {
   'radix-converter': radixConverter,
   'color-converter': colorConverter,
   'number-converter': numberConverter,
+  'encode-tool': encodeTool,
+  'binary-cal': binaryCal,
 }

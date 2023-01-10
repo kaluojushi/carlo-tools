@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "25847941",
+      "name": "Binary Code",
+      "font_class": "a-BinaryCode",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "1305483",
       "name": "数字",
       "font_class": "shuzi",

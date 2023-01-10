@@ -123,3 +123,15 @@ div.el-switch > span.is-active {
 .el-textarea__inner:focus {
   border-color: #42B983;
 }
+
+.el-range-editor.is-active, .el-range-editor.is-active:hover, .el-select .el-input.is-focus .el-input__inner {
+  border-color: #42B983;
+}
+
+.el-select .el-input__inner:focus {
+  border-color: #42B983;
+}
+
+.el-select-dropdown__item.selected {
+  color: #42B983;
+}

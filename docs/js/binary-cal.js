@@ -130,9 +130,9 @@ const binaryCal = {
       showBitwiseResult: false,
       bitwiseResult : [],
       codec: {
-        bitCount: "8",
+        bitCount: "4",
         range: [0, 0],
-        num: -9,
+        num: -8,
         origin: "",
         reverse: "",
         complement: "",
@@ -157,6 +157,11 @@ const binaryCal = {
         return;
       }
       if (this.bitwise.op === "not") {
+        if (!this.bitwise.hasSign) {
+          this.$message.error('无符号数不支持取反操作');
+          this.showBitwiseResult = false;
+          return;
+        }
         const result = ~this.bitwise.num2;
         this.bitwiseResult = [
           { op: "非", binary: this.toBinary(this.bitwise.num2, this.bitwise.bitCount, this.hasSign), decimal: this.bitwise.num2, signType: this.getSignType(this.bitwise.num2) },
@@ -223,7 +228,7 @@ const binaryCal = {
         if (this.codec.num >= 0) {
           this.codec.origin = this.codec.reverse = this.codec.complement = this.toBinary(this.codec.num, this.codec.bitCount, true);
         } else {
-          this.codec.origin = "1" + this.toBinary(-this.codec.num, this.codec.bitCount - 1, false);
+          this.codec.origin = "1" + this.toBinary(-this.codec.num, this.codec.bitCount - 1, false).slice(-this.codec.bitCount + 1);
           this.codec.reverse = "1" + this.codec.origin.slice(1).split("").map(x => x === "0" ? "1" : "0").join("");
           this.codec.complement = this.toBinary(this.codec.num, this.codec.bitCount, true);
         }
@@ -240,6 +245,9 @@ const binaryCal = {
           this.codec.num = parseInt(this.codec.origin, 2);
         } else {
           this.codec.num = -parseInt(this.codec.origin.slice(1), 2);
+          if (this.codec.num === 0) {
+            this.codec.num = -Math.pow(2, this.codec.bitCount - 1);
+          }
         }
         this.onCodecCal(0);
       } else if (type === 2) {

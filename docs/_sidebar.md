@@ -9,7 +9,10 @@
   - [在线工具](online/)
 - 摸鱼
   - [小游戏](fun/game)
-  - [有趣项目](fun/projects)
+  - [休闲](fun/leisure)
+  - [交互](fun/interact)
+  - [整活](fun/amuse)
 - GitHub 项目
   - [文档类项目](github/docs)
   - [实用类项目](github/useful)
+  - [GitHub 相关](github/github)

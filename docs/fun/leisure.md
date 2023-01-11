@@ -1,4 +1,4 @@
-# 有趣项目
+# 休闲
 
 ## 世界各地
 
@@ -30,16 +30,14 @@
 
 > Drive & Listen 是一款给电脑前的同学们纯欣赏使用的小服务，它提供了 49 个城市的开车视频与当地电台，让你可以体验一边听着当地的收音机，一边开车在城市里转悠。
 
-## 整活
+## 神经网络 & AI
 
-### [便携小空调](https://ac.yunyoujun.cn/)
+### [This X Does Not Exist](https://thisxdoesnotexist.com/)
 
-> 为你的夏日带去清凉！
-> 
-> 项目地址：[YunYouJun / air-conditioner](https://github.com/YunYouJun/air-conditioner)
+> 这个 X 不存在，这是一个使用生成对抗网络生成一切网站，它展示的人、猫、简历、小吃、单词都是不存在的。
 
-### [夏日清凉小风扇](https://fan.elpsy.cn/)
+## 生活
 
-> 除了没有风，什么都好！
-> 
-> 项目地址：[ElpsyCN / electric-fan](https://github.com/ElpsyCN/electric-fan)
+### [Life Stats](https://neal.fun/life-stats/)
+
+> 输入生日，这个网站会告诉你一些统计数字，比如你活了多少天、心跳了多少次、地球多了多少人口。

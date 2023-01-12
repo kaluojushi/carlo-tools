@@ -30,6 +30,14 @@
 
 > Drive & Listen 是一款给电脑前的同学们纯欣赏使用的小服务，它提供了 49 个城市的开车视频与当地电台，让你可以体验一边听着当地的收音机，一边开车在城市里转悠。
 
+### [Earth Clock](https://earthclock.cwandt.com/)
+
+> 这个网站使用卫星照片，显示当前的数字时间。
+
+### [Geo Traceroute](https://geotraceroute.com/)
+
+> 用户指定 HTTP 请求的发出地和目的地，这个网站会在谷歌地球上显示路由的跳转路径。
+
 ## 神经网络 & AI
 
 ### [This X Does Not Exist](https://thisxdoesnotexist.com/)
@@ -41,3 +49,19 @@
 ### [Life Stats](https://neal.fun/life-stats/)
 
 > 输入生日，这个网站会告诉你一些统计数字，比如你活了多少天、心跳了多少次、地球多了多少人口。
+
+### [Ambient Chaos](https://neal.fun/ambient-chaos/)
+
+> 一个网页的背景音生成器，提供20多种声音，比如风声、雨声、火车站、教堂钟声等。每种都可以调节音量，还可以选择声音进行合成。
+
+## emoji
+
+### [emojimix](https://tikolu.net/emojimix/)
+
+> 混合两个 emoji 然后生成一个新的 emoji。
+
+### [Emoji to Scale](https://javier.xyz/emoji-to-scale/)
+
+> 这个网站选出一组 Emoji 符号，按照体积从小到大的顺序排列，可以滚动浏览。
+> 
+> 项目地址：[javierbyte / emoji-to-scale](https://github.com/javierbyte/emoji-to-scale)

@@ -5,12 +5,12 @@
   - [图片类工具](toolbox/image)
   - [代码类工具](toolbox/code)
   - [网站运维工具](toolbox/website)
+  - [其他](toolbox/other)
 - 在线工具
   - [在线工具](online/)
 - 摸鱼
   - [小游戏](fun/game)
   - [休闲](fun/leisure)
-  - [交互](fun/interact)
   - [整活](fun/amuse)
 - GitHub 项目
   - [文档类项目](github/docs)

@@ -1,8 +1,8 @@
 - 快速入口
   - [工具大全](toolbox/abc)
   - [在线工具](online/)
-  - [摸鱼小游戏](fun/game)
-  - [GitHub 文档类项目](github/docs)
+  - [摸鱼小游戏](projects/game)
+  - [GitHub 文档类项目](projects/docs.md)
 - 推荐项目
   - [JS Guide](https://jsguide.cn/)
   - [docsify](https://docsify.js.org/#/zh-cn/)

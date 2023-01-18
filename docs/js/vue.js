@@ -10,6 +10,8 @@ import numberConverter from "./number-converter.js";
 import onlineList from "./online-list.js";
 import encodeTool from "./encode-tool.js";
 import binaryCal from "./binary-cal.js";
+import downloader from "./downloader.js";
+import downloadMathtypeActivator from "./download-mathtype-activator.js";
 
 window.$docsify.vueComponents = {
   'online-list': onlineList,
@@ -24,4 +26,6 @@ window.$docsify.vueComponents = {
   'number-converter': numberConverter,
   'encode-tool': encodeTool,
   'binary-cal': binaryCal,
+  downloader,
+  'download-mathtype-activator': downloadMathtypeActivator,
 }

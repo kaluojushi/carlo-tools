@@ -8,11 +8,12 @@
   - [其他](toolbox/other)
 - 在线工具
   - [在线工具](online/)
-- 摸鱼
-  - [小游戏](fun/game)
-  - [休闲](fun/leisure)
-  - [整活](fun/amuse)
-- GitHub 项目
-  - [文档类项目](github/docs)
-  - [实用类项目](github/useful)
-  - [GitHub 相关](github/github)
+- 有趣/有用项目收集
+  - [文档类](projects/docs.md)
+  - [实用类](projects/useful.md)
+  - [GitHub 相关](projects/github.md)
+  - [小游戏](projects/game)
+  - [休闲](projects/leisure)
+  - [整活](projects/amuse)
+- 科研工具收集
+  - [科研软件](research/software)
